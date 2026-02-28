@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dynamic Weather Dashboard</h1>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeatherByCity()">Search</button>
+        </div>
+
+        <p class="location-btn" onclick="getWeatherByLocation()">📍 Use My Location</p>
+
+        <div id="weather" class="weather-card hidden">
+            <h2 id="cityName"></h2>
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <h3 id="temperature"></h3>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+        </div>
+
+        <h2 class="forecast-title">5-Day Forecast</h2>
+        <div id="forecast" class="forecast-container"></div>
+
+        <p id="error" class="error"></p>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
